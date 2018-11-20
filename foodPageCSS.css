@@ -1,0 +1,114 @@
+body, html
+{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+.header{
+	padding: 0px;
+	border: 0px;
+	padding-top: 50px;
+	padding-bottom: 10px;
+	background: black;
+	color: white;
+	height: 25px;
+	border-bottom: 1px solid #cccc00;
+}
+
+.header h1{
+	position: absolute;
+	top: 40px;
+	left: 260px;
+	transform: translate(-50%, -50%);
+	color: #ffcc06;
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+	text-align: right;
+	font-weight: bold;
+	font-size: 50px;
+}
+
+#logo
+{
+	position: absolute;
+	top : 1px;
+	left: 1px;
+}
+
+#support
+{
+	position: absolute;
+	top : 10px;
+	left :1350px;
+	color: #cccc00;
+	cursor: pointer;
+}
+
+#cart
+{
+	position: absolute;
+	top : 10px;
+	left: 1450px;
+	color: #cccc00;
+	cursor: pointer;
+}
+
+#bking
+{
+	position: absolute;
+	left: 100px;
+	top: 100px;
+}
+#cday
+{
+	position: absolute;
+	left: 450px;
+	top: 100px;
+}
+#kfc
+{
+	position: absolute;
+	left: 775px;
+	top: 100px;
+}
+#mcd
+{
+	position: absolute;
+	left: 1100px;
+	top: 100px;
+}
+#phut
+{
+	position: absolute;
+	left: 100px;
+	top: 500px;
+}
+#sbucks
+{
+	position: absolute;
+	left: 450px;
+	top: 500px;
+}
+#dominos
+{
+	position: absolute;
+	left: 775px;
+	top: 500px;
+}
+#subway
+{
+	position: absolute;
+	left: 1100px;
+	top: 500px;
+}
+
+.resto:hover
+{
+	border: 1px solid black;
+	height: 300px;
+	width: 300px;
+}

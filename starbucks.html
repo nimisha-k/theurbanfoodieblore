@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Starbucks</title>
+	<link rel="stylesheet" type="text/css" href="common.css">
+
+	<style type="text/css">
+		#menu
+		{
+			position: absolute;
+			top: 250px;
+			left: 100px;
+			font-weight: bold;
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<img src="hamburger2.jpg" id="logo" height="75" width="100">
+		<h1>Urban Foodie</h1>		
+	</div>
+	<h1> Welcome to Starbucks!</h1>
+
+	
+	<div id="menu">
+		<form action="starbucks.php" method="POST">
+			Espresso : 200Rs  <input type="number" name="n1" required><br>
+			Alphonso : 250Rs  <input type="number" name="n2" required><br>
+			Coffee Frappuccino : 200Rs  <input type="number" name="n3" required><br>
+			Christmas Cookie Frappuccino : 270Rs   <input type="number" name="n4" required><br>
+			Pasta : 180Rs  <input type="number" name="n5" required><br>
+			<input type="submit" value="Submit"><input type="reset" value="Reset">
+		</form>
+	</div>
+</body>
+</html>

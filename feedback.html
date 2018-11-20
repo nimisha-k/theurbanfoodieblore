@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+    body{
+    background-image:  url("mainPagePicture2.jpg");
+}
+
+.btn
+{
+    background  : none;
+    border: 2px solid #ffff06;
+    cursor: pointer;
+    color: #ffff06;
+    height: 50px;
+    width: 70px;
+}
+
+#comments
+{
+    background: none;
+    border: 1px solid #58e3cd;
+    color: #ffff06;
+}
+
+::placeholder
+{
+    color: #cdff06;
+}
+
+
+
+</style>
+</head>
+<script type="text/javascript">
+    function foo()
+    {
+        alert("Your response has been recorded")
+    }
+</script>
+<div class="imagebg"></div>
+<div class="row " style="margin-top: 10px">
+    <div class="col-md-6 col-md-offset-3 form-container">
+        <h2 style = "color:#58e73d;">Your Opinion Matters!</h2>
+        <p style="color: #cccc00">
+            Please provide your feedback below......
+        </p>
+        <form method="submit" id="reused_form">
+            <div class="row">
+                <div class="col-sm-12 form-group">
+                <label style = "color: #58e73d;">How do you rate your overall experience with us?</label>
+                <p>
+                    <label class="radio-inline" style ="color:#cccc00;">
+                    <input type="radio" name="experience" id="radio_experience" value="bad"  >
+                    Bad
+                    </label>
+
+                    <label class="radio-inline" style ="color:#cccc00;">
+                    <input type="radio" name="experience" id="radio_experience" value="average" >
+                    Average
+                    </label>
+
+                    <label class="radio-inline" style ="color:#cccc00;">
+                    <input type="radio" name="experience" id="radio_experience" value="good" >
+                    Good
+                    </label>
+                </p>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <label for="comments" style ="color:#ffff06;">
+                        Comments:</label> <br>
+                    <textarea type="textarea" name="comments" id="comments" placeholder="Your Comments" maxlength="60000" rows="10" cols="50"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 form-group">
+                    <label for="name" style ="color:#ffff06;">
+                        Your Name:</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email" style ="color:#ffff06;">
+                        Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+            </div>
+
+                        <div class="row">
+                <div>
+                    <button type="submit" class="btn" onclick="foo()" >submit </button>
+                </div>
+            </div>
+
+        </form>
+        <div id="success_message" style="width:100%; height:100%; display:none; ">
+            <h3>submit your feedback successfully!</h3>
+        </div>
+        <div id="error_message"
+                style="width:100%; height:100%; display:none; ">
+                    <h3>Error</h3>
+                    Sorry there was an error sending your form.
+
+        </div>
+    </div>
+</div>
+</html>
+<link rel="stylesheet" href="form.css" >
+
+
+
+

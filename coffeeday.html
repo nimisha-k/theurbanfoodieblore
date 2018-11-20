@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coffee Day</title>
+	<link rel="stylesheet" type="text/css" href="common.css">
+
+	<style type="text/css">
+		#menu
+		{
+			position: absolute;
+			top: 250px;
+			left: 100px;
+			font-weight: bold;
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<img src="hamburger2.jpg" id="logo" height="75" width="100">
+		<h1>Urban Foodie</h1>		
+	</div>
+	<h1> Welcome to CoffeeDay!</h1>
+
+	
+	<div id="menu">
+		<form action="cday.php" method="POST">
+			Grilled Chicken Wrap : 209Rs  <input type="number" name="n1" required><br>
+			Afghani Veg Biriyani : 199Rs  <input type="number" name="n2" required><br>
+			Flavoured Capuccino: 109Rs  <input type="number" name="n3" required><br>
+			Sizzle Dazzle Brownie  : 200Rs   <input type="number" name="n4" required><br>
+			Nutty Fudge Brownie  : 120Rs  <input type="number" name="n5" required><br>
+			<input type="submit" value="Submit"><input type="reset" value="Reset">
+		</form>
+	</div>
+</body>
+</html>

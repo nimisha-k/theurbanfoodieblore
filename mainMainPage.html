@@ -38,57 +38,10 @@
 			{
 				var latitude = position.coords.latitude;
 				var longitude = position.coords.longitude;
-				codeLatLng(latitude, longitude);
+				alert("You are currently at : latitude -> "+latitude+" and longitude ->"+longitude)
+				window.location = "mainPage.html"
 			}
 
-			function failure()
-			{
-				alert("location service not working")
-			}
-
-			function codeLatLng(lat, lng)
-			{
-
-			    var latlng = new google.maps.LatLng(lat, lng);
-			    var geocoder = new google.maps.Geocoder();
-			    geocoder.geocode({'latLng': latlng}, function(results, status) 
-			    {
-			        if(status == google.maps.GeocoderStatus.OK)
-			        {
-			        console.log(results)
-				        if (results[1])
-				        {
-				         	//formatted address
-				            alert(results[0].formatted_address)
-				        	//find country name
-				            for (var i=0; i<results[0].address_components.length; i++)
-				            {
-				            	for (var b=0;b<results[0].address_components[i].types.length;b++)
-				            	{
-
-				            //there are different types that might hold a city admin_area_lvl_1 usually does in come cases looking for sublocality type will be more appropriate
-				                	if (results[0].address_components[i].types[b] == "administrative_area_level_1") 
-				                	{
-				                    //this is the object you are looking for
-				                    city= results[0].address_components[i];
-				                    break;
-		                			}
-		            			}
-		        			}
-		        			//city data
-		        			alert(city.short_name + " " + city.long_name)
-		        		}
-		        		else
-		        		{
-	          				alert("No results found");
-	        			}
-	      			} 
-	      			else 
-	      			{
-	        			alert("Geocoder failed due to: " + status);
-	      			}
-	    		});
-	        }			
 		}
 
 		function fb()
@@ -103,7 +56,7 @@
 
 		function twitter()
 		{
-			window.location = "https://twitter.com/?lang=en"
+			window.location = "https://twitter.com/TheUrbanFoodie1"
 		}
 
 		function gplus()
@@ -122,6 +75,15 @@
 
 		function foo()
 		{
+
+			if(localStorage.getItem('count'))
+				localStorage.setItem('count', localStorage.getItem('count')-0+1)
+			else
+				localStorage.setItem('count',1)
+
+
+			alert("You have opened this page for the "+localStorage.getItem('count')+"th time")
+
 			var i=0
 			var x = document.getElementById("line")
 			function changeText()
@@ -137,10 +99,11 @@
 </head>
 <body onload="foo()">
 	<div class="header">
+		<img src="hamburger2.jpg" id="logo" height="75" width="100">
 		<h1>Urban Foodie</h1>
 		<h3 id="about" onclick="aboutClicked()">About</h3>
 		<h3 id="fback" onclick="fbackClicked()">Feedback</h3>
-		<h3 id="bar">|</h3>
+		<h2 id="bar">|</h2>
 		<div class="images">
 			<img src="fb.png" class="icon" height="50" width="50" onclick="fb()">
 			<img src="twitter.png" class="icon" height="50" width="50" onclick="twitter()">
@@ -153,16 +116,16 @@
 
 	<div id="coolStuff">
 		<h1 id="line"></h1>
-		<h2 id="byline">Order from The Urban Foodie!</h5>
+		<h2 id="byline">Order NOW from The Urban Foodie!</h5>
 	</div>
 
 	<div class="geolocation">
 		<textarea rows="1" cols="200" id = "textArea" class="textArea" placeholder="Enter Address"></textarea>
-		<button class="locButton" onclick="geo()">Get Location</button>
-		<button class="foodButton" onclick="toMainPage()">Food</button>
+		<button class="locButton" onclick="geo()">Location</button>
+		<button class="foodButton" onclick="toMainPage()">Order Now</button>
 	</div>
 	<div id = "video">
-		<video width = "420" height = "315" controls>
+		<video width = "400" height = "300" autoplay loop muted controls>
 			<source src = "pizza.mp4" type = "video/mp4">
 	</div>
 
